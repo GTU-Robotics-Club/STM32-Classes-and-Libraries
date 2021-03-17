@@ -1,46 +1,48 @@
 /**
- *
- * Class for motors
- *
- * Header file
- *
- * Compatible with:
- * 1. Cytron
- * 2. Hercules
- *
- * ##########    ##########     ##########
- * ##########    ##########     ##########
- * ###           ###    ###     ###
- * ###           ##########     ###
- * ###  #####    ###  ###       ###
- * ###  #####    ###   ###      ###
- * ###    ###    ###   ###      ###
- * ##########    ###    ###     ##########
- * ##########    ###     ###    ##########
- *
- */
+*
+* Class for motors
+*
+* CPP file
+*
+* Compatible with:
+* 1. Cytron
+* 2. Hercules
+*
+* ##########    ##########     ##########
+* ##########    ##########     ##########
+* ###           ###    ###     ###
+* ###           ##########     ###
+* ###  #####    ###  ###       ###
+* ###  #####    ###   ###      ###
+* ###    ###    ###   ###      ###
+* ##########    ###    ###     ##########
+* ##########    ###     ###    ##########
+*
+*/
 
-#ifndef Motor_h
-#define Motor_h
-#include "stm32f4xx.h"
-#include "stm32f4xx_hal_tim.h"
+#ifndef MOTOR_H
+#define MOTOR_H
+
+#include <stm32f4xx.h>
+#include <stm32f407xx.h>
+#include <stm32f4xx_hal_tim.h>
 
 class Motor {
 public:
-	// Constructors
 	Motor();
-	Motor(GPIO_TypeDef *input_1_port, uint32_t input_1, TIM_HandleTypeDef *htim, TIM_TypeDef *TIM, uint32_t pwm_channel);
-	Motor(GPIO_TypeDef *input_1_port, uint32_t input_1, GPIO_TypeDef *input_2_port, uint32_t input_2, TIM_HandleTypeDef *htim, TIM_TypeDef *TIM, uint32_t pwm_channel);
-	// Methods
-	void clockwise(uint32_t pwm);
-	void anti_clockwise(uint32_t pwm);
-	void brake_motor();
+	Motor(GPIO_TypeDef* GPIOx_1, uint16_t GPIO_Pin_1, TIM_HandleTypeDef *htim, uint32_t Channel, TIM_TypeDef *tim);
+	Motor(GPIO_TypeDef* GPIOx_1, uint16_t GPIO_Pin_1, GPIO_TypeDef* GPIOx_2, uint16_t GPIO_Pin_2, TIM_HandleTypeDef *htim, uint32_t Channel, TIM_TypeDef *tim);
+	void clockwise(uint8_t pwm);
+	void anti_clockwise(uint8_t pwm);
+	void brake();
 private:
-	GPIO_InitTypeDef GPIO_initStruct = {0};
-	GPIO_TypeDef *input_1_port, *input_2_port;
+	GPIO_TypeDef* GPIOx_1;
+	GPIO_TypeDef* GPIOx_2;
+	uint16_t GPIO_Pin_1, GPIO_Pin_2;
 	TIM_HandleTypeDef *htim;
-	TIM_TypeDef *TIM;
-	uint32_t input_1_pin, input_2_pin, pwm_channel;
+	uint32_t Channel;
+	TIM_TypeDef *tim;
 	bool cytron;
 };
+
 #endif
