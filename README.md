@@ -4,7 +4,7 @@
 
 ## 1. Motor Class (17-03-2021)
 
-This class is compatible with Cytron and Hercules Motor Driver.
+This class is compatible with `Cytron` and `Hercules` Motor Driver.
 
 I'll be creating a tutorial on how to use this class soon.
 
