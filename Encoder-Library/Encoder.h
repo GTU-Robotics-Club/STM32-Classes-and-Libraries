@@ -42,6 +42,7 @@ private:
 	TIM_HandleTypeDef *htim;
 	uint32_t prescaler_;
 	int counter_s = 0;
+	bool init = true;
 };
 
 #endif
