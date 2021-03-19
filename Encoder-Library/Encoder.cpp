@@ -38,7 +38,7 @@ Encoder::Encoder(TIM_HandleTypeDef *htim, uint32_t prescaler_) {
 }
 
 void Encoder::write(long int value) {
-	this->htim->Instance->CNT = 0;
+	this->htim->Instance->CNT = value;
 }
 
 long Encoder::read() {
