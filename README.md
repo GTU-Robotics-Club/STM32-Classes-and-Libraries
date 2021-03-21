@@ -29,3 +29,9 @@ Library for using `MPU6050` with STM32.
 [+] To do 
 * Callibration of MPU.
 * Returning the `euler angles`.
+
+## Base Code
+
+The base code can be found in `Bot_STM32`. The `main.cpp` file is located in `Bot_STM32/Core/Src/main.ino` (Note : the `.h` and `.cpp` files will be organized properly, this is just for testing purposes, don't follow this style!!).
+
+![Pin Outs](https://ibb.co/RCJDhkk)
