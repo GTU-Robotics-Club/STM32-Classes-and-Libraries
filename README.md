@@ -13,3 +13,19 @@ I'll be creating a tutorial on how to use this class soon.
 Library for interfacing `incremental encoders` with STM32, tested with STM32F103RB. 
 
 This library solves the existing limitations, and gives us positive as well as negative values, also the encoder values are not limited up to 16-bits.
+
+## 3. Base Class (21-03-2021)
+
+Added base Library, supports Omni "like" bases. Tested on Omni Base as well.
+
+I'll be adding the main project code which we'd tested on the bot, and some description on how to use all the mentioned libraries.
+
+## 4. MPU6050 Library
+
+Library for using `MPU6050` with STM32.
+
+[-] Issues : For now we are just getting the value form the registers and returning them. 
+
+[+] To do 
+* Callibration of MPU.
+* Returning the `euler angles`.
