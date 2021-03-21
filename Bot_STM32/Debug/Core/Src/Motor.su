@@ -1,0 +1,6 @@
+Motor.cpp:26:1:Motor::Motor()	16	static
+Motor.cpp:30:1:Motor::Motor(GPIO_TypeDef*, uint16_t, TIM_HandleTypeDef*, uint32_t, TIM_TypeDef*)	24	static
+Motor.cpp:41:1:Motor::Motor(GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, TIM_HandleTypeDef*, uint32_t, TIM_TypeDef*)	24	static
+Motor.cpp:55:6:void Motor::clockwise(uint8_t)	16	static
+Motor.cpp:80:6:void Motor::anti_clockwise(uint8_t)	16	static
+Motor.cpp:105:6:void Motor::brake()	16	static

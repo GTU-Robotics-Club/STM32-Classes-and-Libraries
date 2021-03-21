@@ -1,0 +1,12 @@
+Base.cpp:23:1:Base::Base(Motor*, Motor*, Motor*, Motor*)	24	static
+Base.cpp:33:6:void Base::forward(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:39:6:void Base::backward(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:45:6:void Base::left(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:52:6:void Base::right(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:58:6:void Base::up_left(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:65:6:void Base::up_right(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:71:6:void Base::down_left(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:78:6:void Base::down_right(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:84:6:void Base::base_clockwise(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:91:6:void Base::base_anti_clockwise(uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+Base.cpp:98:6:void Base::bot_brake()	16	static

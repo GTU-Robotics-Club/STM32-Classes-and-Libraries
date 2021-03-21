@@ -1,0 +1,4 @@
+Encoder.cpp:20:1:Encoder::Encoder(TIM_HandleTypeDef*)	16	static
+Encoder.cpp:30:1:Encoder::Encoder(TIM_HandleTypeDef*, uint32_t)	24	static
+Encoder.cpp:40:6:void Encoder::write(long int)	16	static
+Encoder.cpp:44:6:long int Encoder::read()	24	static
