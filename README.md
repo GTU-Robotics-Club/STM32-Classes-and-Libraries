@@ -1,6 +1,6 @@
 # STM32 Classes and Libraries
 
-## Note: All the libraries developed here are compatible with STM32F407VG, in order to make them compatible with your own board, just replace the `#include <stm32f4xx.h>` with your own board.
+## Note: All the libraries developed here are compatible aadn tested with STM32F407VG and STM32F103RB, in order to make them compatible with your own board, just replace the `#include <stm32f4xx.h>` or `#include <stm32f1xx.h>` with your own board.
 
 ## 1. Motor Class (17-03-2021)
 
