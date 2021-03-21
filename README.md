@@ -2,19 +2,19 @@
 
 ## Note: All the libraries developed here are compatible aadn tested with STM32F407VG and STM32F103RB, in order to make them compatible with your own board, just replace the `#include <stm32f4xx.h>` or `#include <stm32f1xx.h>` with your own board.
 
-## 1. Motor Class (17-03-2021)
+## 1. Motor Library (17-03-2021)
 
 This class is compatible with `Cytron` and `Hercules` Motor Driver.
 
 I'll be creating a tutorial on how to use this class soon.
 
-## 2. Encoder Class (19-03-2021)
+## 2. Encoder Library (19-03-2021)
 
 Library for interfacing `incremental encoders` with STM32, tested with STM32F103RB. 
 
 This library solves the existing limitations, and gives us positive as well as negative values, also the encoder values are not limited up to 16-bits.
 
-## 3. Base Class (21-03-2021)
+## 3. Base Library (21-03-2021)
 
 Added base Library, supports Omni "like" bases. Tested on Omni Base as well.
 
