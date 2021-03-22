@@ -50,7 +50,7 @@ And we are creating encoders object as well, in this project, we used 2 encoders
 
 That's all! I've shared you most of the details which are necessary for using the Base, Motor and Encoder class, I'll still create the example codes if time permits, but till that time, you can reach me out @ <a href="mailto:alpharomeo911@protonmail.ch">alpharomeo911@protonmail.ch</a>.
 
-## 6. TFMini Library
+## 6. TFMini Library (22-03-2021)
 
 Library for interfacing `TF-Mini` with `STM32`.
 
