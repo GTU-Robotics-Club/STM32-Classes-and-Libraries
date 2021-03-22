@@ -30,7 +30,7 @@ Library for using `MPU6050` with STM32.
 * Callibration of MPU.
 * Returning the `euler angles`.
 
-## Base Code (21-03-2021)
+## 5. Base Code (21-03-2021)
 
 The base code can be found in `Bot_STM32`. The `main.cpp` file is located in `Bot_STM32/Core/Src/main.ino` (Note : the `.h` and `.cpp` files will be organized properly, this is just for testing purposes, don't follow this style!!).
 
@@ -49,3 +49,9 @@ And we are creating encoders object as well, in this project, we used 2 encoders
 `Encoder encoder_1(&htim2);` // This is an encoder object, and we are simply passing the address of the timer we wish to use.
 
 That's all! I've shared you most of the details which are necessary for using the Base, Motor and Encoder class, I'll still create the example codes if time permits, but till that time, you can reach me out @ <a href="mailto:alpharomeo911@protonmail.ch">alpharomeo911@protonmail.ch</a>.
+
+## 6. TFMini Library
+
+Library for interfacing `TF-Mini` with `STM32`.
+
+Connections : `UART`, with only `TX` pin of `TF-Mini` connected with `STM-32`'s `RX`.
