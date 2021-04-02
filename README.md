@@ -24,11 +24,7 @@ I'll be adding the main project code which we'd tested on the bot, and some desc
 
 Library for using `MPU6050` with STM32.
 
-[-] Issues : For now we are just getting the value form the registers and returning them. 
-
-[+] To do 
-* Callibration of MPU.
-* Returning the `euler angles`.
+MPU6050 library is fully functional (02-04-2021)
 
 ## 5. Base Code (21-03-2021)
 
@@ -62,3 +58,7 @@ Connections : `UART`, with only `TX` pin of `TF-Mini` connected with `STM-32`'s 
 Nucleo board comes with ST-Link and their STM32's UART2 pins are connected with ST-Link, which enables serial data transfer via UART. Just include this library, and pass the uart's address which is configured for the data transfer. 
 
 And you can use uprintf(char *) to print by passing an array of character to this function.
+
+## An Introduction to STM32 Programming and Hardware
+
+Documentation for STM32
