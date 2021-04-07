@@ -78,17 +78,17 @@ void Base::down_right(uint8_t pwm_1, uint8_t pwm_2, uint8_t pwm_3, uint8_t pwm_4
   motor_4->brake();
 }
 void Base::base_clockwise(uint8_t pwm_1, uint8_t pwm_2, uint8_t pwm_3, uint8_t pwm_4) {
-  motor_1->anti_clockwise(pwm_1);
-  motor_2->anti_clockwise(pwm_2);
-  motor_3->anti_clockwise(pwm_3);
-  motor_4->anti_clockwise(pwm_4);
-}
-
-void Base::base_anti_clockwise(uint8_t pwm_1, uint8_t pwm_2, uint8_t pwm_3, uint8_t pwm_4) {
   motor_1->clockwise(pwm_1);
   motor_2->clockwise(pwm_2);
   motor_3->clockwise(pwm_3);
   motor_4->clockwise(pwm_4);
+}
+
+void Base::base_anti_clockwise(uint8_t pwm_1, uint8_t pwm_2, uint8_t pwm_3, uint8_t pwm_4) {
+  motor_1->anti_clockwise(pwm_1);
+  motor_2->anti_clockwise(pwm_2);
+  motor_3->anti_clockwise(pwm_3);
+  motor_4->anti_clockwise(pwm_4);
 }
 
 void Base::bot_brake() {
