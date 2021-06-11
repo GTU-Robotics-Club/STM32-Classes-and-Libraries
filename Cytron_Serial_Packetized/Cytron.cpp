@@ -26,6 +26,11 @@ Cytron::Cytron(UART_HandleTypeDef* huart, uint8_t address, uint8_t channel) {
 	this->channel = channel;
 }
 
+
+uint8_t map(uint8_t value, uint8_t start1, uint8_t stop1, uint8_t start2, uint8_t stop2) {
+	return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+}
+
 /*
  * The send_dummy_bit is to initialize all the cytrons connected.
  * Call this function only if you have initialized all the cytrons
@@ -56,19 +61,17 @@ void Cytron::send_dummy_bit(void) {
  */
 
 void Cytron::clockwise(uint8_t pwm) {
-	pwm = ZERO_POINT + ((CLOCKWISE - ZERO_POINT) / (INPUT_END - INPUT_START))\
-			* (pwm - INPUT_START);
-	send_data(pwm);
+	pwm = map(pwm, 0, 255, 127, 255);
+	this->send_data(pwm);
 }
 
 void Cytron::anti_clockwise(uint8_t pwm) {
-	pwm = ZERO_POINT + ((ANTI_CLOCKWISE - ZERO_POINT) / (INPUT_END - INPUT_START))\
-			* (pwm - INPUT_START);
-	send_data(pwm);
+	pwm = map(pwm, 0, 255, 127, 0);
+	this->send_data(pwm);
 }
 
 void Cytron::brake(void) {
-	send_data(ZERO_POINT);
+	this->send_data(127);
 }
 
 /*
@@ -92,9 +95,9 @@ void Cytron::brake(void) {
  * addition of first three packets.
  */
 
-void Cytron::send_data(uint8_t pwm) {
+void Cytron::send_data(uint8_t speed) {
 	this->packet[1] = (this->channel << 3) | this->address;
-	this->packet[2] = pwm;
+	this->packet[2] = speed;
 	this->packet[3] = this->packet[0] + this->packet[1] + this->packet[2];
 
 	HAL_UART_Transmit(huart, packet, 4, HAL_MAX_DELAY);

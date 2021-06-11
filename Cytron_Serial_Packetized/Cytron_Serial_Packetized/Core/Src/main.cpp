@@ -91,6 +91,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
+  HAL_Delay(2000);
   Cytron cytron_1(&huart1, 0b000, 1);
   cytron_1.send_dummy_bit();
   /* USER CODE END 2 */

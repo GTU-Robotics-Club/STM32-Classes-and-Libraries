@@ -30,14 +30,11 @@
 
 #include "stm32f4xx.h"
 #include "stm32f4xx_hal_uart.h"
+#include <math.h>
 
 #define DUMMY_BIT 128
 #define HEADER 85
-#define INPUT_START 0
-#define INPUT_END 255
-#define ZERO_POINT 127
-#define CLOCKWISE 255
-#define ANTI_CLOCKWISE 0
+
 
 class Cytron {
 public:
@@ -54,7 +51,7 @@ private:
 	uint8_t channel;
 	uint8_t packet[4] = {HEADER, 0, 0, 0};
 	uint8_t dummy_bit = DUMMY_BIT;
-	void send_data(uint8_t pwm);
+	void send_data(uint8_t speed);
 };
 
 
